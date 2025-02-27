@@ -5,16 +5,16 @@ on:
       - opened
     branches:
       - main
-      - 'dev-*' #dev-color , dev-idk
-      - 'feat/**' #feat/color/specified
+      - dev-*
+      - feat/**
   workflow_dispatch:
   push:
     branches:
       - main
-      - 'dev-*'
-      - 'feat/**
-    paths-ignore: #ignores changes on .github/** files
-      - '.github/workflows/*'
+      - dev-*
+      - feat/**
+    paths-ignore:
+      - .github/workflows/*
 jobs:
   deploy:
     runs-on: ubuntu-latest
